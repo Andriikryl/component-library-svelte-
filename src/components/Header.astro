@@ -1,0 +1,27 @@
+---
+import Container from "./Container.astro";
+---
+
+<header class="header">
+  <Container>
+    <div class="header__box">
+      <p class="header__title">header</p>
+    </div>
+  </Container>
+</header>
+
+<style>
+  header {
+    border-bottom: 2px solid black;
+    padding-block: 20px;
+  }
+  .header__title {
+    text-transform: uppercase;
+    color: var(--black, #1b1b1b);
+    font-family: "Patrick Hand";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+  }
+</style>
