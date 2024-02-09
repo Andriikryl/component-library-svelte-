@@ -7,14 +7,14 @@ import type {
 	CollapseContext
 } from './types'
 
-export function setAccordionOptions({collapse}: AccordionOptions){
-    const activeComponentId = writable(null);
-    setContext('collapse', collapse)
-	setContext('active', activeComponentId)
+export function setAccordionOptions({ collapse }: AccordionOptions) {
+	const activeComponentId = writable<ActiveId>(null)
+	setContext<CollapseContext>('collapse', collapse)
+	setContext<ActiveIdContext>('active', activeComponentId)
 }
 
 export function getAccordionOptions() {
-	const collapse = getContext('collapse')
-	const activeComponentId = getContext('active')
+	const collapse = getContext<CollapseContext>('collapse')
+	const activeComponentId = getContext<ActiveIdContext>('active')
 	return { collapse, activeComponentId }
 }
