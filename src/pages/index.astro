@@ -1,8 +1,10 @@
 ---
 import ComponentsGroup from "../components/ComponentsGroup.svelte";
+import Fade from "../components/Fade.svelte";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <ComponentsGroup client:only="svelte" />
+  <Fade client:only="svelte" />
 </Layout>
